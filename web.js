@@ -2,12 +2,10 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
-var fs = require('fs');
-
-var buffer = new Buffer(256);
-
 app.get('/', function(request, response) {
    response.send("hola");
+   var fs = require('fs');
+   var buffer = new Buffer(256);
    buffer.write("hola2");
    response.send(buffer.toString());
 });
