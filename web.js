@@ -7,7 +7,7 @@ var fs = require('fs');
 var buffer = new Buffer(8);
 
 app.get('/', function(request, response) {
-  buffer.write(fs.readFileSync('index.html', encoding));
+  buffer.write(fs.readFileSync('index.html'));
    buffer.toString();
 });
 
