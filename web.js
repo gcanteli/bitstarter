@@ -7,12 +7,12 @@ app.get('/', function(request, response) {
    var fs = require('fs');
    var str = fs.readFileSync("index.html", "utf8");
    //response.send(str);
-   var buffer = new Buffer(2256);
+   var buffer = new Buffer(52256);
    var len = buffer.write(str);
    response.send(buffer.toString("utf8",0, len));
 });
 
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || 8080;
 app.listen(port, function() {
   console.log("Listening on " + port);
 });
